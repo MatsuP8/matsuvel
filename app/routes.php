@@ -5,6 +5,7 @@ $template = new \Matsuvel\TemplateFactory(__DIR__ . '/view/');
 
 $routes['/'] = function () use ($template) {
     return [200, ['Content-Type' => 'text/html'], $template->create('index',[
+        'title' => 'まつぴーのホームページ',
         'name' => 'まつぴー'
     ])];
 };
@@ -16,4 +17,3 @@ $routes['/phpinfo.php'] = function () {
 };
 
 return $routes;
-
