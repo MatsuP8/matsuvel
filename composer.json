@@ -1,18 +1,21 @@
 {
-    "name" : "matsup8/matsuvel",
-    "description": "matsuvel is a Ore-Ore web framework",
-    "license": "Apache-2.0",
-    "require": {
-        "php": "^7.3",
-        "ext-intl": "^7.3",
-        "ext-mbstring": "^7.3"
+  "name": "matsup8/matsuvel",
+  "description": "matsuvel is a Ore-Ore web framework",
+  "license": "Apache-2.0",
+  "require": {
+    "php": "^7.3",
+    "ext-intl": "^7.3",
+    "ext-mbstring": "^7.3"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Matsuvel\\": "src/"
     },
-    "config": {
-        "sort-packages": true
-    },
-    "autoload": {
-        "files": [
-            "src/functions.php"
-        ]
-    }
+    "files": [
+      "src/functions.php"
+    ]
+  }
 }

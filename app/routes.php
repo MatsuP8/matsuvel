@@ -1,10 +1,12 @@
 <?php
-$routes = [];
 
-$routes['/'] = function () {
-    ob_start();
-    include __DIR__ . '/../app/view/index.phtml';
-    return [200, ['Content-Type' => 'text/html'], ob_get_clean()];
+$routes = [];
+$template = new \Matsuvel\TemplateFactory(__DIR__ . '/view/');
+
+$routes['/'] = function () use ($template) {
+    return [200, ['Content-Type' => 'text/html'], $template->create('index',[
+        'name' => 'まつぴー'
+    ])];
 };
 
 $routes['/phpinfo.php'] = function () {
